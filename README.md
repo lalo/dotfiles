@@ -9,3 +9,7 @@
 ### slate
 
 - install [slate](https://github.com/jigish/slate)
+
+### gitignore
+
+- git config --global core.excludesfile '~/.gitignore'

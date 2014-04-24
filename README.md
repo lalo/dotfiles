@@ -13,3 +13,7 @@
 ### gitignore
 
 - git config --global core.excludesfile '~/.gitignore'
+
+### tmux
+
+- brew install reattach-to-user-namespace

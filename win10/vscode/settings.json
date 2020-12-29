@@ -1,0 +1,23 @@
+{
+    "remote.extensionKind": {
+        "ms-azuretools.vscode-docker": "workspace"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "vim.hlsearch": true,
+    "vim.visualstar": true,
+    "vim.searchHighlightTextColor": "editor.findMatchHighlightBackground",
+    "gitlens.views.repositories.files.layout": "list",
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Noctis High Contrast",
+    "vim.easymotion": true,
+    "vim.normalModeKeyBindings": [
+        {
+            "before": ["<leader>","c"],
+            "commands": [
+                "workbench.action.showCommands",
+            ]
+        }
+    ],
+    "diffEditor.ignoreTrimWhitespace": false,
+    "terminal.integrated.shell.linux": "/usr/bin/zsh"
+}

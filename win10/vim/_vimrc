@@ -1,0 +1,62 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+"let mapleader = "}"
+
+set rtp+=$HOME/.vim/bundle/Vundle.vim
+call vundle#begin('$HOME/.vim/bundle')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'scrooloose/nerdtree'
+Plugin 'ntpeters/vim-better-whitespace'
+Plugin 'chreekat/vim-paren-crosshairs'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'easymotion/vim-easymotion'
+Plugin 'tpope/vim-fugitive'
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'romainl/apprentice'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+
+syntax on
+
+nnoremap <leader>d :NERDTreeToggle<cr>
+
+" local clipboard
+noremap <Leader>y "+y
+noremap <Leader>p "+p
+
+" show hidden files in nerdtree
+let NERDTreeShowHidden=1
+
+nmap gcc <Plug>NERDCommenterToggle
+omap gcc <Plug>NERDCommenterToggle
+vmap gcc <Plug>NERDCommenterToggle
+
+" Jump to anywhere you want with minimal keystrokes, with just one key binding.
+" `s{char}{label}`
+nmap s <Plug>(easymotion-overwin-f)
+" or
+" `s{char}{char}{label}`
+" Need one more keystroke, but on average, it may be more comfortable.
+nmap s <Plug>(easymotion-overwin-f2)
+
+" Turn on case insensitive feature
+let g:EasyMotion_smartcase = 1
+
+" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+au BufRead,BufNewFile *.md setlocal textwidth=80
+
+"colorscheme desert
+colorscheme apprentice
+set guifont=Consolas:h12
+set number
+
+set hlsearch
+
